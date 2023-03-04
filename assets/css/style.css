@@ -8,9 +8,27 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-body {
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+
+*{
+  color: #fff;
+}
+
+html, body {
   font-family: "Open Sans", sans-serif;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   color: #272829;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100vh !important;
+  font-family: "Rubik", sans-serif;
+  --bs-body-font-weight: 400;
+  --bs-body-font-size: 1rem;
+  --bs-body-line-height: 1.6;
 }
 
 a {
@@ -24,7 +42,7 @@ a:hover {
 }
 
 .section{
-  background: #fff;
+  background: #000;
 }
 
 h1,
@@ -82,7 +100,7 @@ h6 {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 10%;
+  width: 150px;
   transition: all ease-in-out 0.5s;
   z-index: 9997;
   transition: all 0.5s;
@@ -137,7 +155,7 @@ h6 {
 }
 
 #main {
-  margin-left: 10%;
+  margin-left: 150px;
   max-width: 90%;
   background: #000;
 }
@@ -296,7 +314,7 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 60px 130px 0 0;
   overflow: hidden;
 }
 
@@ -305,7 +323,7 @@ section {
 }
 
 .section-title {
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 .section-title h2 {
@@ -335,36 +353,13 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-.about .content h3 {
-  font-weight: 700;
-  font-size: 26px;
-  color: #173b6c;
-}
-
-.about .content ul { 
-  list-style: none;
-  padding: 0;
-}
-
-.about .content ul li {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.about .content ul strong {
-  margin-right: 10px;
-}
-
-.about .content ul i {
-  font-size: 16px;
-  margin-right: 5px;
-  color: #149ddd;
-  line-height: 0;
-}
-
-.about .content p:last-child {
-  margin-bottom: 0;
+.catch-me-item{
+  width: 100%;
+  padding: 0.8em;
+  border-radius: 10px;
+  background: #181818;
+  font-size: 15px;
+  margin-bottom: 7%;
 }
 
 /*--------------------------------------------------------------
@@ -419,10 +414,46 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Experience
+--------------------------------------------------------------*/
+
+.experience-item{
+  width: 100%;
+  background: #181818;
+  padding: 1em;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 2px solid rgba(255,255,255,0.6);
+}
+
+.experience-main{
+  padding: 0 1rem;
+}
+
+.experience-date{
+  font-size: 12px;
+}
+
+.experience-title{
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.experience-desc{
+  font-size: 15px;
+}
+
+
+/*--------------------------------------------------------------
 # Akills
 --------------------------------------------------------------*/
+.skill{
+  font-size: 15px;
+  color: #fff !important;
+}
+
 .skills .progress {
-  height: 60px;
+  height: 35px;
   display: block;
   background: none;
   border-radius: 0;
@@ -458,63 +489,6 @@ section {
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
-.resume .resume-title {
-  font-size: 26px;
-  font-weight: 700;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: #050d18;
-}
-
-.resume .resume-item {
-  padding: 0 0 20px 20px;
-  margin-top: -2px;
-  border-left: 2px solid #1f5297;
-  position: relative;
-}
-
-.resume .resume-item h4 {
-  line-height: 18px;
-  font-size: 18px;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
-  color: #050d18;
-  margin-bottom: 10px;
-}
-
-.resume .resume-item h5 {
-  font-size: 16px;
-  background: #e4edf9;
-  padding: 5px 15px;
-  display: inline-block;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.resume .resume-item ul {
-  padding-left: 20px;
-}
-
-.resume .resume-item ul li {
-  padding-bottom: 10px;
-}
-
-.resume .resume-item:last-child {
-  padding-bottom: 0;
-}
-
-.resume .resume-item::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50px;
-  left: -9px;
-  top: 0;
-  background: #fff;
-  border: 2px solid #1f5297;
-}
 
 /*--------------------------------------------------------------
 # Portfolio
@@ -1030,6 +1004,7 @@ section {
 .breadcrumbs {
   padding: 20px 0;
   background: #f9f9f9;
+  z-index: 9999;
 }
 
 .breadcrumbs h2 {
@@ -1068,40 +1043,5 @@ section {
 
   .breadcrumbs ol li {
     display: inline-block;
-  }
-}
-
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-#footer {
-  padding: 15px;
-  color: #f4f6fd;
-  font-size: 14px;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 10%;
-  z-index: 9999;
-  border-right: 0.1px solid rgba(255,255,255,0.5);
-  background: #000;
-}
-
-#footer .copyright {
-  text-align: center;
-}
-
-#footer .credits {
-  padding-top: 5px;
-  text-align: center;
-  font-size: 13px;
-  color: #eaebf0;
-}
-
-@media (max-width: 1199px) {
-  #footer {
-    position: static;
-    width: auto;
-    padding-right: 20px 15px;
   }
 }
